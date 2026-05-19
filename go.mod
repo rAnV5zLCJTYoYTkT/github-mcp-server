@@ -40,3 +40,6 @@ require (
 // Notes:
 //   - Studying how MCP tools map to GitHub REST vs GraphQL endpoints.
 //   - go-github v67 uses per-resource service structs; worth noting for custom tool additions.
+//   - GraphQL (shurcooL/githubv4) is used for queries that benefit from field selection,
+//     e.g. fetching PR review threads without over-fetching REST payload fields.
+//   - TODO: experiment with adding a custom MCP tool for listing stale branches.
