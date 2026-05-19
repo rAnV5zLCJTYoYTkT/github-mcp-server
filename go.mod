@@ -36,3 +36,7 @@ require (
 
 // Personal fork for learning MCP server patterns with the GitHub API.
 // Upstream: https://github.com/github/github-mcp-server
+//
+// Notes:
+//   - Studying how MCP tools map to GitHub REST vs GraphQL endpoints.
+//   - go-github v67 uses per-resource service structs; worth noting for custom tool additions.
