@@ -61,6 +61,10 @@ func runServer(ctx context.Context, token, logFile string, readOnly bool) error 
 	if token == "" {
 		token = os.Getenv("GITHUB_TOKEN")
 	}
+	// Also fall back to GH_TOKEN, which is used by the GitHub CLI.
+	if token == "" {
+		token = os.Getenv("GH_TOKEN")
+	}
 	if token == "" {
 		return fmt.Errorf("GitHub token is required: set --token flag or GITHUB_TOKEN environment variable")
 	}
