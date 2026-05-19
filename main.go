@@ -86,7 +86,7 @@ func runServer(ctx context.Context, token, logFile string, readOnly bool) error 
 		return fmt.Errorf("failed to create MCP server: %w", err)
 	}
 
-	fmt.Fprintf(os.Stderr, "Starting GitHub MCP Server %s\n", Version)
+	fmt.Fprintf(os.Stderr, "Starting GitHub MCP Server %s (commit: %s)\n", Version, Commit)
 	if readOnly {
 		fmt.Fprintln(os.Stderr, "Running in read-only mode")
 	}
