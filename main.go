@@ -50,8 +50,8 @@ including repository management, issues, pull requests, and more.`,
 
 	cmd.Flags().StringVar(&token, "token", "", "GitHub personal access token (defaults to GITHUB_TOKEN env var)")
 	cmd.Flags().StringVar(&logFile, "log-file", "", "Path to log file (defaults to stderr)")
-	// Default to read-only for safety; pass --read-only=false to enable write operations.
-	cmd.Flags().BoolVar(&readOnly, "read-only", true, "Restrict the server to read-only GitHub operations")
+	// Default to false so write operations are available out of the box in my personal setup.
+	cmd.Flags().BoolVar(&readOnly, "read-only", false, "Restrict the server to read-only GitHub operations")
 
 	return cmd
 }
