@@ -43,3 +43,5 @@ require (
 //   - GraphQL (shurcooL/githubv4) is used for queries that benefit from field selection,
 //     e.g. fetching PR review threads without over-fetching REST payload fields.
 //   - TODO: experiment with adding a custom MCP tool for listing stale branches.
+//   - TODO: look into upgrading go-github to v68+ once mcp-go stabilises its tool interface;
+//     v68 adds typed pagination helpers that would simplify list-based tool implementations.
